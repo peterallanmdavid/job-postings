@@ -33,8 +33,7 @@ export const JobListItem: React.FC<JobListItemProps> = ({
 
   return (
     <Card highligted={featured && isNew}>
-      {/* Overlapping Logo */}
-      <div className="-mt-10 md:mt-0 ml-2">
+      <div className="-mt-10 md:mt-0">
         <Image
           src={logo}
           alt={`${company} Logo`}
@@ -43,10 +42,7 @@ export const JobListItem: React.FC<JobListItemProps> = ({
           className="w-12 h-12 md:w-16 md:h-16 "
         />
       </div>
-
-      {/* Left Section: Company Info */}
       <div className="flex flex-col items-start flex-1 pl-0 md:pl-5">
-        {/* Company Details */}
         <div>
           <div className="flex flex-wrap items-center gap-1">
             <h2 className="text-primary text-sm font-bold">{company}</h2>
@@ -66,7 +62,6 @@ export const JobListItem: React.FC<JobListItemProps> = ({
         </div>
       </div>
 
-      {/* Right Section: Tags */}
       <div className="flex flex-wrap gap-2 border-t md:border-t-0 pt-4 md:pt-0">
         {allTags.map((tag) => (
           <Tag text={tag} key={tag} onClick={updateFilter} />
