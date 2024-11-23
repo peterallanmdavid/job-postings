@@ -16,10 +16,6 @@ export default {
         cardsBackground: "var(--cards-background)",
         pillsBackground: "var(--pills-background)",
       },
-      screens: {
-        mobile: { max: "375px" }, // Mobile: max-width 375px
-        desktop: { max: "1440px" }, // Desktop: max-width 1440px
-      },
       fontFamily: {
         spartan: ["var(--font-league-spartan)"],
       },
