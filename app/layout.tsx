@@ -1,16 +1,13 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
-import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+import { League_Spartan } from "next/font/google";
+import "./globals.css";
+import Image from "next/image";
+
+const leagueSpartan = League_Spartan({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-league-spartan",
 });
 
 export const metadata: Metadata = {
@@ -25,9 +22,29 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${leagueSpartan.variable} antialiased`}>
+        <div className="w-full h-24 bg-primary">
+          <picture>
+            {/* Mobile Image */}
+            <source
+              media="(max-width: 375px)"
+              src="/images/bg-header-mobile.svg"
+            />
+            {/* Desktop Image */}
+            <source
+              media="(min-width: 376px)"
+              src="/images/bg-header-desktop.svg"
+            />
+            {/* Fallback */}
+            <Image
+              src="/images/bg-header-desktop.svg"
+              alt="background"
+              height={0}
+              width={0}
+              style={{ width: "100%", height: "100%" }}
+            />
+          </picture>
+        </div>
         {children}
       </body>
     </html>

@@ -3,15 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --primary: hsl(180, 29%, 50%);
+  --pills-background: hsl(180, 8%, 52%);
   --foreground: #171717;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --secondary: hsl(180, 14%, 20%);
+  --cards-background: #ffffff;
+  --background: hsl(180, 52%, 96%);
 }
 
 body {
