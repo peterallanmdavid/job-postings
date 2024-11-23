@@ -10,7 +10,7 @@ export default function Filters({
   updateFilter: (filter: string) => string;
 }) {
   return (
-    <Card>
+    <Card offSetTop>
       <div className="flex  items-center w-full flex-row">
         <div className="flex flex-wrap gap-2 flex-row flex-1">
           {filters.map((filter) => (

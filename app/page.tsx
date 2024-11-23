@@ -1,4 +1,3 @@
-import classNames from "classnames";
 import Filters from "./components/Filters";
 import { JobListItem } from "./components/JobListItem";
 import { Job } from "./utils/contants";
@@ -53,12 +52,7 @@ export default async function Home({ searchParams }: PageProps) {
       });
 
   return (
-    <div
-      className={classNames(
-        "flex flex-col m-5 mt-10",
-        currentFilters?.length && "-mt-8"
-      )}
-    >
+    <div className="flex flex-col m-5 mt-10">
       {!!currentFilters?.length && (
         <Filters updateFilter={updateFilter} filters={currentFilters} />
       )}
