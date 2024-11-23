@@ -14,11 +14,11 @@ interface PageProps {
 export default async function Home({ searchParams }: PageProps) {
   const res = await fetch(`${baseUrl}/data.json`);
   const data: Job[] = await res.json();
-
-  const currentFilters: string[] = Array.isArray(searchParams?.filterTags)
-    ? searchParams?.filterTags
-    : searchParams.filterTags
-    ? [searchParams.filterTags]
+  const params = await searchParams;
+  const currentFilters: string[] = Array.isArray(params?.filterTags)
+    ? params?.filterTags
+    : params.filterTags
+    ? [params.filterTags]
     : [];
 
   const updateFilter = (filter: string): string => {

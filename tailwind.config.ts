@@ -8,13 +8,16 @@ export default {
   ],
   theme: {
     extend: {
+      fontSize: {
+        ["2xs"]: ["0.55rem", "1rem"], // Custom font size and line height for `text-xs`
+      },
       colors: {
         primary: "var(--primary)",
-        background: "var(--background)",
         foreground: "var(--foreground)",
-        secondary: "var(--secondary)",
-        cardsBackground: "var(--cards-background)",
-        pillsBackground: "var(--pills-background)",
+        ["ligh-gray-cyan-1"]: "var(--ligh-gray-cyan-1)",
+        ["ligh-gray-cyan-2"]: "var(--ligh-gray-cyan-2)",
+        ["dark-gray-cyan-2"]: "var(--dark-gray-cyan-2)",
+        ["dark-gray-cyan-1"]: "var(--dark-gray-cyan-1)",
       },
       fontFamily: {
         spartan: ["var(--font-league-spartan)"],

@@ -4,16 +4,18 @@
 
 :root {
   --primary: hsl(180, 29%, 50%);
-  --pills-background: hsl(180, 8%, 52%);
   --foreground: #171717;
 
-  --secondary: hsl(180, 14%, 20%);
-  --cards-background: #ffffff;
-  --background: hsl(180, 52%, 96%);
+  --dark-gray-cyan-1: hsl(180, 8%, 52%);
+
+  --dark-gray-cyan-2: hsl(180, 14%, 20%);
+  --white-background: #ffffff;
+  --ligh-gray-cyan-1: hsl(180, 52%, 96%);
+  --ligh-gray-cyan-2: hsl(180, 52%, 96%);
 }
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background: var(--ligh-gray-cyan-1);
   font-family: Arial, Helvetica, sans-serif;
 }

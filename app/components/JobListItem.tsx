@@ -48,9 +48,9 @@ export const JobListItem: React.FC<JobListItemProps> = ({
       <div className="flex flex-col items-start flex-1 pl-0 md:pl-5">
         {/* Company Details */}
         <div>
-          <div className="flex flex-wrap items-center gap-2">
-            <h2 className="text-primary font-bold">{company}</h2>
-            {isNew && <Pill type="new" />}
+          <div className="flex flex-wrap items-center gap-1">
+            <h2 className="text-primary text-sm font-bold">{company}</h2>
+            {isNew && <Pill type="new!" />}
             {featured && <Pill type="featured" />}
           </div>
           <h3 className="text-xl font-bold text-gray-800 mt-2 hover:text-primary">
